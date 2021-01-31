@@ -39,6 +39,7 @@ Python2 scripts for Stack Buffer Overflows
 1. Modify `config.py` and make sure that initially, `BADCHARS=[0x00,0x0A]`
 2. `./4_badchars.py`
 3. Copy `bad.bin` generated to target machine
+4. In debugger, right click on `ESP` and click `Follow in Dump`.
 4. In debugger, execute `!mona compare -a esp -f c:\path\to\bad.bin`
 5. Again modify `config.py` to add additional `BADCHARS`
 

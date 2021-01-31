@@ -1,5 +1,5 @@
 # bof_scripts
-Python2 scripts for Stack Buffer Overflows
+Python2 scripts for Stack Buffer Overflows inspired by [dostackbufferoverflowgood](https://github.com/justinsteven/dostackbufferoverflowgood)
 
 ## Dependencies
 1. msfvenom

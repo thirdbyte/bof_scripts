@@ -52,7 +52,7 @@ Python2 scripts for Stack Buffer Overflows inspired by [dostackbufferoverflowgoo
 
 ### 6_shellcode.sh
 
-1. `/6_shellcode.sh '<BADCHARS>' <LHOST> <LPORT>` where `BADCHARS` must be in form of `\x00\x0A..`
+1. `/6_shellcode.sh '<BADCHARS>' <LHOST> <LPORT>` where `<BADCHARS>` must be in form of `\x00\x0A..`
 
 ### 7_exploit.py 
 

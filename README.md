@@ -4,7 +4,7 @@ Python2 scripts for Stack Buffer Overflows inspired by [dostackbufferoverflowgoo
 ## Dependencies
 1. msfvenom
 2. python2
-4. Immunity Debugger with Mona.py
+4. Immunity Debugger with mona.py
 
 ## Usage
 
@@ -25,7 +25,7 @@ Python2 scripts for Stack Buffer Overflows inspired by [dostackbufferoverflowgoo
 ### 2_find_offset.py
 
 1. `./2_find_offset.py`
-2. Copy the Mona command, paste it in Immunity Debugger & run it
+2. Copy the mona command, paste it in Immunity Debugger & run it
 3. Note the `EIP OFFSET`
 
 ### 3_confirm_offset.py
@@ -56,7 +56,7 @@ OR
 ### 5_find_jmp_esp.py
 
 1. `./5_find_jmp_esp.py`
-2. Copy the Mona command, paste it in Immunity Debugger & run it. Alternatively, execute `!mona modules` followed by `!mona find -s '\xff\xe4' -m module.dll` if the previous command does not return a `JMPESP`
+2. Copy the mona command, paste it in Immunity Debugger & run it. Alternatively, execute `!mona modules` followed by `!mona find -s '\xff\xe4' -m module.dll` if the previous command does not return a `JMPESP`
 3. Note the `JMPESP` address
 
 ### 6_confirm_jmp_esp.py

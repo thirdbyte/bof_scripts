@@ -26,7 +26,7 @@ Python2 scripts for Stack Buffer Overflows inspired by [dostackbufferoverflowgoo
 
 1. `./2_find_offset.py`
 2. Copy the mona command, paste it in Immunity Debugger & run it
-3. Note the `EIP OFFSET`
+3. Note the EIP `OFFSET`
 
 ### 3_confirm_offset.py
 

